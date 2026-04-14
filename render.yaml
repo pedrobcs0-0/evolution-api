@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: evolution-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: SERVER_URL
+        value: https://evolution-api.onrender.com
+      - key: AUTHENTICATION_TYPE
+        value: apikey
+      - key: AUTHENTICATION_API_KEY
+        value: dramelmelo2025
+      - key: AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES
+        value: "true"
+      - key: DEL_INSTANCE
+        value: "false"
+      - key: LANGUAGE
+        value: pt-BR
+      - key: CONFIG_SESSION_PHONE_CLIENT
+        value: Dra. Mel Bot
+      - key: CONFIG_SESSION_PHONE_NAME
+        value: Chrome
+      - key: QRCODE_LIMIT
+        value: "30"
+      - key: WEBHOOK_GLOBAL_ENABLED
+        value: "false"
+      - key: STORE_MESSAGES
+        value: "true"
+      - key: STORE_CONTACTS
+        value: "true"
+      - key: DATABASE_ENABLED
+        value: "false"
